@@ -1,0 +1,322 @@
+{
+    "structure":{
+        "header":{
+            "title": "40k et des brouettes",
+            "navLinks": [
+                {
+                    "name": "Accueil",
+                    "url": "/home"
+                }
+            ]
+        },
+        "bodys":{
+            "home":{
+                 "waitinTime":{
+                    "type":"waiter",
+                    "content":{
+                        "title": "Départ dans :",
+                        "dayStart": "2025-07-02",
+                        "timeStart": "06:15",
+                        "dayEnd": "2025-07-02",
+                        "timeEnd": "06:15"
+                    }
+                },
+                "listCardExp":{
+                    "type":"div"
+                },
+                "explications":{
+                    "type":"cardExplanations",
+                    "parent": "listCardExp",
+                    "content":{
+                        "picture": "/images/Personnes/project.jpg",
+                        "title":"40k et des brouettes",
+                        "description":"Nous c'est Loïc et Loïc. Ça fait bientôt 15 ans qu'on est potes. Souvent la vraie vie, on trouve ça ennuyeux alors dès qu'on peut on va en montagne. On voudrait bien aller partout et tout faire alors heureusement qu'on bosse à plein temps, ça nous laisse des jours de travail pour nous reposer.<br><br>Cet été on visite la Suisse. On a un mois pour relier le point culminant de chaque canton à la force humaine. Ça veut dire un mois de vélo, d'alpinisme et de trail avec le support de nos ami.e.s et familles qui nous aident à nous ravitailler et à déplacer notre matériel là où on en a besoin.<br><br>Sommets: 25<br>Temps: 28 jours<br>Distance: 1700 km<br>Dénivelé: 51'000 m<br>Hauteur cumulée des sommets: 40k... et des brouettes <br>Du dénivelé et des galères → <b>@<a href=\"https://www.instagram.com/40k_et_des_brouettes/\">40k_et_des_brouettes</a></b>"
+                    }
+                },
+                "descriptionProject":{
+                    "type":"div"
+                },
+                "sommetList":{
+                    "type":"list",
+                    "parent": "descriptionProject",
+                    "content":{
+                        "title": "Sommet des Cantons",
+                        "items": [
+                                {
+                                    "numero": 1,
+                                    "canton": "Grisons",
+                                    "point_culminant": "Piz Bernina",
+                                    "altitude_m": 4049,
+                                    "quotation": "AD",
+                                    "point_depart": "Morteratsch (+approche)",
+                                    "done":true,
+                                    "doneAt": 1751433828
+                                },
+                                {
+                                    "numero": 2,
+                                    "canton": "Saint-Gall",
+                                    "point_culminant": "Ringelspitz",
+                                    "altitude_m": 3248,
+                                    "quotation": "AD-",
+                                    "point_depart": "Par la Ringelspitzhütte SAC depuis Tamins ou Vattis",
+                                    "done":true,
+                                    "doneAt":1751625037
+                                },
+                                {
+                                    "numero": 3,
+                                    "canton": "Tessin",
+                                    "point_culminant": "Rheinwaldhorn",
+                                    "altitude_m": 3402,
+                                    "quotation": "PD",
+                                    "point_depart": "Hinterrhein (E, par Zapporthütte SAC) ou Dongio/Malvaglia (W)",
+                                    "done":true,
+                                    "doneAt":1751779692
+                                },
+                                {
+                                    "numero": 4,
+                                    "canton": "Uri",
+                                    "point_culminant": "Dammastock",
+                                    "altitude_m": 3630,
+                                    "quotation": "F/AD+",
+                                    "point_depart": "Hôtel Belvédère (W, Valais), Göschenen (E, Uri par la Dammahütte)",
+                                    "done":false
+                                },
+                                {
+                                    "numero": 5,
+                                    "canton": "Berne",
+                                    "point_culminant": "Finsteraarhorn",
+                                    "altitude_m": 4274,
+                                    "quotation": "AD-",
+                                    "point_depart": "Finsteraarhornhütte depuis Konkordiaplatz ou depuis Burghütte (Valais), sinon depuis Grindelwald par la Schreckhornhütte (AD/long) [Berne]",
+                                    "done":false
+                                },
+                                {
+                                    "numero": 6,
+                                    "canton": "Valais",
+                                    "point_culminant": "Pointe Dufour",
+                                    "altitude_m": 4634,
+                                    "quotation": "AD-",
+                                    "point_depart": "Zermatt (+approche)",
+                                    "done":false
+                                },
+                                {
+                                    "numero": 7,
+                                    "canton": "Vaud",
+                                    "point_culminant": "Les Diablerets",
+                                    "altitude_m": 3210,
+                                    "quotation": "F/PD",
+                                    "point_depart": "Savièse (Valais), Les Diablerets (Vaud, + approche)",
+                                    "done":true
+                                },
+                                {
+                                    "numero": 8,
+                                    "canton": "Fribourg",
+                                    "point_culminant": "Vanil Noir",
+                                    "altitude_m": 2389,
+                                    "quotation": "T4+",
+                                    "point_depart": "Grandvillard",
+                                    "done":false
+                                },
+                                {
+                                    "numero": 9,
+                                    "canton": "Genève",
+                                    "point_culminant": "Les Arales",
+                                    "altitude_m": 516,
+                                    "quotation": "Vélo",
+                                    "point_depart": "",
+                                    "done":false
+                                },
+                                {
+                                    "numero": 10,
+                                    "canton": "Neuchâtel",
+                                    "point_culminant": "Chasseral",
+                                    "altitude_m": 1552,
+                                    "quotation": "Vélo",
+                                    "point_depart": "",
+                                    "done":false
+                                },
+                                {
+                                    "numero": 11,
+                                    "canton": "Soleure",
+                                    "point_culminant": "Hasenmatt",
+                                    "altitude_m": 1445,
+                                    "quotation": "T1",
+                                    "point_depart": "",
+                                    "done":false
+                                },
+                                {
+                                    "numero": 12,
+                                    "canton": "Jura",
+                                    "point_culminant": "Mont Raimeux",
+                                    "altitude_m": 1302,
+                                    "quotation": "Vélo",
+                                    "point_depart": "",
+                                    "done":false
+                                },
+                                {
+                                    "numero": 13,
+                                    "canton": "Bâle-Campagne",
+                                    "point_culminant": "Hinteri Egg",
+                                    "altitude_m": 1169,
+                                    "quotation": "T1",
+                                    "point_depart": "",
+                                    "done":false
+                                },
+                                {
+                                    "numero": 14,
+                                    "canton": "Argovie",
+                                    "point_culminant": "Geissfluegrat",
+                                    "altitude_m": 908,
+                                    "quotation": "T1",
+                                    "point_depart": "",
+                                    "done":false
+                                },
+                                {
+                                    "numero": 15,
+                                    "canton": "Bâle-Ville",
+                                    "point_culminant": "Sankt Chrischona",
+                                    "altitude_m": 522,
+                                    "quotation": "Vélo",
+                                    "point_depart": "",
+                                    "done":false
+                                },
+                                {
+                                    "numero": 16,
+                                    "canton": "Schaffhouse",
+                                    "point_culminant": "Hagen",
+                                    "altitude_m": 912,
+                                    "quotation": "T1",
+                                    "point_depart": "",
+                                    "done":false
+                                },
+                                {
+                                    "numero": 17,
+                                    "canton": "Thurgovie",
+                                    "point_culminant": "Hohgrat",
+                                    "altitude_m": 991,
+                                    "quotation": "T1",
+                                    "point_depart": "",
+                                    "done":false
+                                },
+                                {
+                                    "numero": 18,
+                                    "canton": "Zurich",
+                                    "point_culminant": "Schnebelhorn",
+                                    "altitude_m": 1292,
+                                    "quotation": "T1-3",
+                                    "point_depart": "",
+                                    "done":false
+                                },
+                                {
+                                    "numero": 19,
+                                    "canton": "Appenzell Rhodes-Intérieures",
+                                    "point_culminant": "Säntis",
+                                    "altitude_m": 2502,
+                                    "quotation": "T3",
+                                    "point_depart": "Depuis toutes les orientations",
+                                    "done":false
+                                },
+                                {
+                                    "numero": 20,
+                                    "canton": "Schwytz",
+                                    "point_culminant": "Bös Fulen",
+                                    "altitude_m": 2802,
+                                    "quotation": "PD+",
+                                    "point_depart": "Linthal",
+                                    "done":false
+                                },
+                                {
+                                    "numero": 21,
+                                    "canton": "Glaris",
+                                    "point_culminant": "Tödi",
+                                    "altitude_m": 3614,
+                                    "quotation": "PD",
+                                    "point_depart": "Linthal (NE, Fridolinshütte), Camona (S, Trun)",
+                                    "done":false
+                                },
+                                {
+                                    "numero": 22,
+                                    "canton": "Zoug",
+                                    "point_culminant": "Wildspitz",
+                                    "altitude_m": 1580,
+                                    "quotation": "Vélo/T2-3",
+                                    "point_depart": "Steinberg (S), Unterägen (N)",
+                                    "done":false
+                                },
+                                {
+                                    "numero": 23,
+                                    "canton": "Obwald",
+                                    "point_culminant": "Titlis",
+                                    "altitude_m": 3238,
+                                    "quotation": "F?",
+                                    "point_depart": "Engelberg, aucune info",
+                                    "done":false
+                                },
+                                {
+                                    "numero": 24,
+                                    "canton": "Nidwald",
+                                    "point_culminant": "Rotstöckli",
+                                    "altitude_m": 2901,
+                                    "quotation": "Kx?",
+                                    "point_depart": "Engelberg, aucune info",
+                                    "done":false
+                                },
+                                {
+                                    "numero": 25,
+                                    "canton": "Lucerne",
+                                    "point_culminant": "Brienzer Rothorn",
+                                    "altitude_m": 2350,
+                                    "quotation": "T2-3",
+                                    "point_depart": "Brienz (N), Sörenberg (S)",
+                                    "done":false
+                                }
+                        ]
+                    },
+                    "options":{
+                        "scrollable":true,
+                        "maxHeight": "450px",
+
+                        "orderby": "highest_altitude"
+                    }
+                },
+                "koomotCart":{
+                    "type":"iframe",
+                    "parent": "descriptionProject",
+                    "content":{
+                        "src": "https://www.komoot.com/fr-fr/collection/2604568/embed"
+                    }
+                },
+                "getActivityCard":{
+                    "type":"mapActivity",
+                    "content":{
+                        "addr":"https://apiprodlolo.onrender.com",
+                        "endpoint":"/mails"
+                    }
+                }
+                             
+            }
+        },
+        "footer":{
+            "copyright": "©2025 Syly LRDM",
+            "contact": {
+                "email": "sylvain.gandini@ikmail.com"
+            },
+            "links": [
+                {
+                    "image": "/images/Personnes/Loic1.jpg",
+                    "name": "Peuprolixe",
+                    "url": "https://www.instagram.com/peuprolixe/"
+                },
+                {
+                    "image": "/images/Personnes/Loic2.jpg",
+                    "name": "Iridescent Ibex",
+                    "url": "https://www.instagram.com/iridescent.ibex/"
+                }              
+            ]
+        },
+        "options":{
+            "language": "fr"
+            
+        }
+    }
+}
