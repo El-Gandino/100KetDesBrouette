@@ -115,7 +115,7 @@
                                     "altitude_m": 2389,
                                     "quotation": "T4+",
                                     "point_depart": "Grandvillard",
-                                    "done":false
+                                    "done":true
                                 },
                                 {
                                     "numero": 9,
@@ -124,7 +124,7 @@
                                     "altitude_m": 516,
                                     "quotation": "Vélo",
                                     "point_depart": "",
-                                    "done":false
+                                    "done":true
                                 },
                                 {
                                     "numero": 10,
@@ -133,7 +133,7 @@
                                     "altitude_m": 1552,
                                     "quotation": "Vélo",
                                     "point_depart": "",
-                                    "done":false
+                                    "done":true
                                 },
                                 {
                                     "numero": 11,
@@ -142,7 +142,7 @@
                                     "altitude_m": 1445,
                                     "quotation": "T1",
                                     "point_depart": "",
-                                    "done":false
+                                    "done":true
                                 },
                                 {
                                     "numero": 12,
@@ -151,7 +151,7 @@
                                     "altitude_m": 1302,
                                     "quotation": "Vélo",
                                     "point_depart": "",
-                                    "done":false
+                                    "done":true
                                 },
                                 {
                                     "numero": 13,
@@ -160,7 +160,7 @@
                                     "altitude_m": 1169,
                                     "quotation": "T1",
                                     "point_depart": "",
-                                    "done":false
+                                    "done":true
                                 },
                                 {
                                     "numero": 14,
@@ -169,7 +169,7 @@
                                     "altitude_m": 908,
                                     "quotation": "T1",
                                     "point_depart": "",
-                                    "done":false
+                                    "done":true
                                 },
                                 {
                                     "numero": 15,
@@ -178,7 +178,7 @@
                                     "altitude_m": 522,
                                     "quotation": "Vélo",
                                     "point_depart": "",
-                                    "done":false
+                                    "done":true
                                 },
                                 {
                                     "numero": 16,
@@ -187,7 +187,7 @@
                                     "altitude_m": 912,
                                     "quotation": "T1",
                                     "point_depart": "",
-                                    "done":false
+                                    "done":true
                                 },
                                 {
                                     "numero": 17,
@@ -196,7 +196,7 @@
                                     "altitude_m": 991,
                                     "quotation": "T1",
                                     "point_depart": "",
-                                    "done":false
+                                    "done":true
                                 },
                                 {
                                     "numero": 18,
@@ -205,7 +205,7 @@
                                     "altitude_m": 1292,
                                     "quotation": "T1-3",
                                     "point_depart": "",
-                                    "done":false
+                                    "done":true
                                 },
                                 {
                                     "numero": 19,
@@ -214,7 +214,7 @@
                                     "altitude_m": 2502,
                                     "quotation": "T3",
                                     "point_depart": "Depuis toutes les orientations",
-                                    "done":false
+                                    "done":true
                                 },
                                 {
                                     "numero": 20,
@@ -232,7 +232,7 @@
                                     "altitude_m": 3614,
                                     "quotation": "PD",
                                     "point_depart": "Linthal (NE, Fridolinshütte), Camona (S, Trun)",
-                                    "done":false
+                                    "done":true
                                 },
                                 {
                                     "numero": 22,

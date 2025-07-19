@@ -117,11 +117,52 @@
 
 <body class="dark-mode">
     <script>
+        var stream ={};
+
         fetch('data.json?t=' + new Date().getTime(), { cache: "no-cache" })
             .then(response => response.json())
             .then(json => new PageConstructor(json));
     </script>
 </body>
 
+<?php
+
+// Affiche les erreurs pour le debug (à désactiver en production)
+ini_set('display_errors', 0);
+ini_set('display_startup_errors', 0);
+//error_reporting(E_ALL);
+
+// Fichier où le compteur est enregistré
+$counterFile = 'counter.txt';
+
+// Date du jour au format YYYY-MM-DD
+$today = date('Y-m-d');
+
+// Initialise le tableau des compteurs
+$counters = [];
+
+// Si le fichier existe, on le lit
+if (file_exists($counterFile)) {
+    $lines = file($counterFile, FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
+    foreach ($lines as $line) {
+        list($date, $value) = explode(':', $line);
+        $counters[$date] = (int)trim($value);
+    }
+}
+
+// Incrémente le compteur du jour
+if (isset($counters[$today])) {
+    $counters[$today]++;
+} else {
+    $counters[$today] = 1;
+}
+
+// Écrit toutes les données mises à jour dans le fichier
+$linesToWrite = [];
+foreach ($counters as $date => $value) {
+    $linesToWrite[] = "$date: $value";
+}
+file_put_contents($counterFile, implode("\n", $linesToWrite));
+?>
 
 </html>

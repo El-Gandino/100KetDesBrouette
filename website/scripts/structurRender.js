@@ -6,6 +6,7 @@ class PageConstructor {
 
     init() {
         CacheStorage.PagfeConstructor = this;
+        stream.PageConstructor = this;
         this.buildHeader();
         this.buildBody('home'); // Tu peux changer selon la page à afficher
         this.buildFooter();
@@ -177,22 +178,28 @@ class PageConstructor {
         endDate.classList.add('end-date');
         endDate.textContent = formatDateToFR(content.dayEnd);
 
-        const track = document.createElement('div');
-        track.classList.add('track');
-
-        const alpinist = document.createElement('div');
-        alpinist.classList.add('alpinist');
-        alpinist.id = 'alpinist';
+    
         function formatDateToFR(dateStr) {
             const [year, month, day] = dateStr.split("-");
             return `${day} ${month} ${year}`;
         }
-        track.appendChild(alpinist);
-        timeline.appendChild(startDate);
-        timeline.appendChild(track);
-        timeline.appendChild(endDate);
-        timelineContainer.appendChild(timeline);
-        container.appendChild(timelineContainer);
+        // Ajout d'un compteur de sommet
+        let summitList =  stream.PageConstructor.data.bodys.home.sommetList.content.items;
+        let summitDone = summitList.filter(summit => summit.done).length;
+      
+        
+        const summitCount = document.createElement('span');
+        summitCount.classList.add('summit-count');
+        summitCount.textContent = `Sommets: ${summitDone}/${summitList.length}`;
+        //console.log("summitList", summitList);
+       container.appendChild(summitCount);
+
+        //timeline.appendChild(startDate);
+        //timeline.appendChild(summitCount);
+        //timeline.appendChild(endDate);
+        //timelineContainer.appendChild(timeline);
+        //container.appendChild(timelineContainer);
+    
 
         // === Countdown ===
         const countdownContainer = document.createElement('div');
@@ -211,67 +218,29 @@ class PageConstructor {
             countdownElement.appendChild(div);
             unitElements[unit] = div;
         });
-
         container.appendChild(countdownContainer);
         document.body.appendChild(container); // Ajoute tout au body
-
         // === Timing Logic ===
         const startDateTime = new Date(`${content.dayStart}T${content.timeStart}:00`);
         const endDateTime = new Date(`${content.dayEnd}T${content.timeEnd}:00`);
         const totalDuration = endDateTime - startDateTime;
-
         function update() {
             const now = new Date();
             const elapsed = now - startDateTime;
             const remaining = startDateTime - now;
-
-            // Mise à jour de l'alpiniste
-            if (now < startDateTime) {
-                alpinist.style.left = '0%';
-            } else if (now >= endDateTime) {
-                timeline.classList.add('displayNone');
-                title.innerHTML = `<span>Temps écoulé</span>`;
-            } else {
-                const progress = (elapsed / totalDuration) * 100;
-                alpinist.style.left = `${progress}%`;
-            }
-
-            // Mise à jour du décompte
-            if (remaining <= 0 && now < endDateTime) {
-                const diff = endDateTime - now;
-                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-                const minutes = Math.floor((diff / (1000 * 60)) % 60);
-                const seconds = Math.floor((diff / 1000) % 60);
-               
-                unitElements.days.textContent = `${days}j`;
-                unitElements.hours.textContent = `${hours}h`;
-                unitElements.minutes.textContent = `${minutes}min`;
-                unitElements.seconds.textContent = `${seconds}s`;
-            } else if (now >= endDateTime) {
-                // Si la date de fin est atteinte, on compte le temps écoulé depuis le début
-                const diff = now - startDateTime;
-                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-                const minutes = Math.floor((diff / (1000 * 60)) % 60);
-                const seconds = Math.floor((diff / 1000) % 60); 
-                 unitElements.days.textContent = `${days}j`;
-                unitElements.hours.textContent = `${hours}h`;
-                unitElements.minutes.textContent = `${minutes}min`;
-                unitElements.seconds.textContent = `${seconds}s`;
-
-            } else {
-                const diff = startDateTime - now;
-                const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
-                const minutes = Math.floor((diff / (1000 * 60)) % 60);
-                const seconds = Math.floor((diff / 1000) % 60);
-
-                unitElements.days.textContent = `${days}j`;
-                unitElements.hours.textContent = `${hours}h`;
-                unitElements.minutes.textContent = `${minutes}min`;
-                unitElements.seconds.textContent = `${seconds}s`;
-            }
+            timeline.classList.add('displayNone');
+            title.innerHTML = `<span>Temps écoulé</span>`;
+            // Si la date de fin est atteinte, on compte le temps écoulé depuis le début
+            const diff = now - startDateTime;
+            //const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) );
+            const minutes = Math.floor((diff / (1000 * 60)) % 60);
+            const seconds = Math.floor((diff / 1000) % 60); 
+            //unitElements.days.textContent = `${days}j`;
+            unitElements.hours.textContent = `${hours}h`;
+            unitElements.minutes.textContent = `${minutes}min`;
+            unitElements.seconds.textContent = `${seconds}s`;
+            unitElements.days.classList.add('displayNone');  
         }
         const interval = setInterval(update, 2000); // toutes les 2 secondes (alpiniste)
         update(); // mise à jour immédiate
